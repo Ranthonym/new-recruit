@@ -13,6 +13,9 @@ function App() {
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         minDate={new Date()}
+        isClearable
+        showMonthDropdown
+        scrollableMonthYearDropdown
       />
     </div>
   );
