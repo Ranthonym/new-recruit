@@ -12,6 +12,7 @@ function App() {
       <DatePicker
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
+        minDate={new Date()}
       />
     </div>
   );
