@@ -9,23 +9,30 @@ const axios = require("axios");
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
 
-  axios
-    .get("http://localhost:3001/candidates")
-    .then((res) => {
-      let data = res.data;
-      data.forEach((e) => {
-        console.log(`${e.first_name}, ${e.last_name}, ${e.email}`);
-      });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
   const getCandidates = (date) => {
     setSelectedDate(date);
-    console.log(date);
+    // console.log(date);
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    // console.log(month, year);
     console.log(date.getDate());
-    console.log(date.toDateString());
+    let fullDate = `${month}/${date.getDate()}/${year}`;
+    console.log(fullDate);
+
+    axios
+      .get("http://localhost:3001/candidates")
+      .then((res) => {
+        let data = res.data;
+        console.log(data[0].date);
+        // data.forEach((e) => {
+        //   console.log(`${e.first_name}, ${e.last_name}, ${e.email}`);
+        // });
+        let chosen = data.filter((candidate) => candidate.date === fullDate);
+        console.log(chosen);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
