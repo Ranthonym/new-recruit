@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.candidate-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+.empty-list {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 20px;
+}

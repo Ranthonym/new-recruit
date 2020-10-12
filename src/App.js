@@ -10,6 +10,7 @@ const axios = require("axios");
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [candidateList, setCandidateList] = useState("");
 
   const getCandidates = (date) => {
     setSelectedDate(date);
@@ -25,12 +26,13 @@ function App() {
       .get("http://localhost:3001/candidates")
       .then((res) => {
         let data = res.data;
-        console.log(data[0].date);
+        // console.log(data[0].date);
         // data.forEach((e) => {
         //   console.log(`${e.first_name}, ${e.last_name}, ${e.email}`);
         // });
         let chosen = data.filter((candidate) => candidate.date === fullDate);
-        console.log(chosen);
+        setCandidateList(chosen);
+        console.log(candidateList);
       })
       .catch((error) => {
         console.log(error);
@@ -49,7 +51,15 @@ function App() {
         scrollableMonthYearDropdown
         placeholderText="Click to select a date"
       />
-      <div></div>
+      {candidateList ? (
+        <div className="candidate-list">
+          {candidateList.map((candidate) => (
+            <CandidateCard key={candidate.id} candidate={candidate} />
+          ))}
+        </div>
+      ) : (
+        <div className="empty-list">No candidates booked for this date</div>
+      )}
     </div>
   );
 }
