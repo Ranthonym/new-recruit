@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
 
+import CandidateCard from "../src/components/CandidateCard/CandidateCard";
+
 const axios = require("axios");
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
         scrollableMonthYearDropdown
         placeholderText="Click to select a date"
       />
+      <div></div>
     </div>
   );
 }
