@@ -41,6 +41,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="App-header">NEW RECRUIT</h1>
       <DatePicker
         selected={selectedDate}
         onChange={(date) => getCandidates(date)}
@@ -51,7 +52,7 @@ function App() {
         scrollableMonthYearDropdown
         placeholderText="Click to select a date"
       />
-      {candidateList ? (
+      {candidateList.length > 0 ? (
         <div className="candidate-list">
           {candidateList.map((candidate) => (
             <CandidateCard key={candidate.id} candidate={candidate} />
