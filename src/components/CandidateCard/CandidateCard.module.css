@@ -6,3 +6,8 @@
   background-color: white;
   max-width: 25%;
 }
+
+.Name {
+  display: flex;
+  justify-content: space-around;
+}

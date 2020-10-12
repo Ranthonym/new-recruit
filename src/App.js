@@ -12,27 +12,19 @@ function App() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [candidateList, setCandidateList] = useState("");
 
+  // helper function that fetches api data and filters candidates based on date selected by user
   const getCandidates = (date) => {
     setSelectedDate(date);
-    // console.log(date);
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
-    // console.log(month, year);
-    console.log(date.getDate());
     let fullDate = `${month}/${date.getDate()}/${year}`;
-    console.log(fullDate);
 
     axios
       .get("http://localhost:3001/candidates")
       .then((res) => {
         let data = res.data;
-        // console.log(data[0].date);
-        // data.forEach((e) => {
-        //   console.log(`${e.first_name}, ${e.last_name}, ${e.email}`);
-        // });
         let chosen = data.filter((candidate) => candidate.date === fullDate);
         setCandidateList(chosen);
-        console.log(candidateList);
       })
       .catch((error) => {
         console.log(error);
