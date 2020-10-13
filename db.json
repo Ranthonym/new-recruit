@@ -2,37 +2,37 @@
   "candidates": [
     {
       "id": 1,
-      "first_name": "Robert",
-      "last_name": "Schwartz",
-      "email": "rob23@gmail.com",
-      "date": "10/16/2020"
-    },
-    {
-      "id": 2,
-      "first_name": "Lucy",
-      "last_name": "Ballmer",
-      "email": "lucyb56@gmail.com",
+      "first_name": "Jin",
+      "last_name": "Sakai",
+      "email": "jin@dosho.com",
       "date": "10/15/2020"
     },
     {
+      "id": 2,
+      "first_name": "Naomi",
+      "last_name": "Hunter",
+      "email": "nhunt@.shadowmoses.com",
+      "date": "10/16/2020"
+    },
+    {
       "id": 3,
-      "first_name": "Anna",
-      "last_name": "Smith",
-      "email": "annasmith23@gmail.com",
+      "first_name": "Faith",
+      "last_name": "Conners",
+      "email": "fconners@edge.com",
       "date": "10/13/2020"
     },
     {
       "id": 4,
-      "first_name": "Ronald",
-      "last_name": "Brown",
-      "email": "bobbrown432@yahoo.com",
+      "first_name": "Sam",
+      "last_name": "Porter",
+      "email": "sambridge@uca.com",
       "date": "10/14/2020"
     },
     {
       "id": 5,
-      "first_name": "Francis",
-      "last_name": "Bacon",
-      "email": "rogerbacon12@yahoo.com",
+      "first_name": "Isaac",
+      "last_name": "Clarke",
+      "email": "iclarke@ishimura.com",
       "date": "10/16/2020"
     
     },

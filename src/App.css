@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: gainsboro;
 }
 
 .App-header {
@@ -16,7 +17,7 @@
 
 .candidate-list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
   flex-direction: row;
   margin-top: 4rem;
 }
